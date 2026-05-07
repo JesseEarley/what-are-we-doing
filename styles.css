@@ -63,6 +63,6 @@ h2{
 
     .statusCard{
         margin: 1rem auto;
-        width: calc(100% - 2rem); 
+        width: calc(100% - 2rem) !important; 
     }
 }
