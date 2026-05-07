@@ -18,9 +18,15 @@ async function getStatus() {
                 statusEl.textContent = data.message;
             }
             if (updatedEl) {
-                // Formatting the date to look a bit nicer
-                const date = new Date(data.updated);
-                updatedEl.textContent = `Last updated: ${date.toLocaleString()}`;
+                const dateAttempt = new Date(data.updated);
+                
+                // If it's a valid date object (ISO format), format it nicely
+                if (!isNaN(dateAttempt.getTime())) {
+                    updatedEl.textContent = `Last updated: ${dateAttempt.toLocaleString()}`;
+                } else {
+                    // If it's the "May 7 at 8:21 AM" format, just show it directly
+                    updatedEl.textContent = `Last updated: ${data.updated}`;
+                }
             }
         } catch (error) {
             if (statusEl) {
