@@ -15,7 +15,11 @@ body {
 .statusCardWrapper{
     display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
+}
+
+.statusCardWrapper-home{
+    width: 35%;
 }
 
 .statusCard {
@@ -42,4 +46,11 @@ h2{
 
 #Status {
 	font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+    .statusCardWrapper-home  .statusCard{
+        display: block;
+        width: 100%;
+    }
 }
