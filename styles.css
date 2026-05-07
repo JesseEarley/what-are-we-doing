@@ -18,9 +18,6 @@ body {
 	align-items: stretch;
 }
 
-.statusCardWrapper-home{
-    width: 35%;
-}
 
 .statusCard {
 	margin: 1rem;
@@ -28,6 +25,7 @@ body {
 	padding: 2rem;
 	border-radius: 2rem;
     box-shadow: 3px 3px #333, 0 0 .6rem #474646, 0 0 .6rem #474646;
+    width: 50%;
 }
 
 h1{
@@ -49,8 +47,11 @@ h2{
 }
 
 @media screen and (max-width: 900px) {
-    .statusCardWrapper-home  .statusCard{
+    .statusCardWrapper-home {
         display: block;
+    }
+
+    .statusCard{
         width: 100%;
     }
 }
